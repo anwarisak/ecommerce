@@ -5,7 +5,7 @@ import { Menu, ShoppingCart, Star } from "lucide-react";
 
 const Header = () => {
   return (
-    <header className="w-full max-w-[1240px] mx-auto px-4 h-16 flex items-center justify-between">
+    <header className="w-full max-w-[1240px] mx-auto px-4 h-26 uppercase flex items-center justify-between">
       <div>
         <img className="w-8 h-8 object-cover" src={logo} alt="logo" />
       </div>

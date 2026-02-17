@@ -3,11 +3,11 @@ import { productlist } from "../../index";
 const ProductGrid = () => {
   return (
     <div className="px-8">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
         {productlist.map((product) => (
           <div key={product.id} className="text-start">
             <img
-              className="w-full h-64 object-cover"
+              className="w-full h-80 object-cover rounded-lg"
               src={product.img}
               alt={product.name}
             />

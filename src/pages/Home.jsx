@@ -3,14 +3,16 @@ import Header from "../components/layout/Header";
 import Hero from "../components/home/Hero";
 import Features from "../components/home/Features";
 import Product from "./Product";
+import NewArrivals from "./NewArrivals";
 
 const Home = () => {
   return (
     <div>
       <Header />
       <Hero />
-      <Features />
       <Product />
+      <Features />
+      <NewArrivals />
     </div>
   );
 };
