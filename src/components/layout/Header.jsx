@@ -1,23 +1,27 @@
 import logo from "../../assets/logo.png";
 import { Navlinks } from "../../index";
 import { Link } from "react-router-dom";
-import { Menu, BellDot, ShoppingCart } from "lucide-react";
+import { Menu } from "lucide-react";
+
 const Header = () => {
   return (
-    <header className="w-full max-w-[1240px] flex-wrap mx-auto h-24 md:p-6 flex justify-around md:justify-between items-center">
-      <div className="">
-        <img className="w-8 h-8 object-cover" src={logo} alt="" />
+    <header className="w-full max-w-[1240px] mx-auto px-4 h-16 flex items-center justify-between">
+      {/* Logo */}
+      <div>
+        <img className="w-8 h-8 object-cover" src={logo} alt="logo" />
       </div>
-      <ul className="hidden md:flex items-center gap-4">
-        {Navlinks.map((navlink, index) => (
-          <li className="cursor-pointer" key={index}>
+
+      {/* Desktop Navigation */}
+      <ul className="hidden md:flex items-center gap-6">
+        {Navlinks.map((navlink) => (
+          <li key={navlink.id} className="cursor-pointer">
             <Link to={navlink.path}>{navlink.label}</Link>
           </li>
         ))}
       </ul>
-      <div className="flex gap-6">
-        {/* <ShoppingCart /> */}
-        {/* <BellDot /> */}
+
+      {/* Mobile Menu Icon */}
+      <div className="md:hidden">
         <Menu />
       </div>
     </header>
