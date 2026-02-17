@@ -4,7 +4,7 @@ import { Star, Heart, ChessQueen } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="max-w-4xl mx-auto items-center">
+    <section className="max-w-[1240px] mx-auto items-center">
       <div className="md:flex items-center justify-center bg-white-100 p-8 ">
         <div className="">
           <h1 className="text-5xl w-100 font-bold uppercase ">
@@ -15,7 +15,7 @@ const Hero = () => {
             asperiores!
           </h4>
           <button
-            className="h-14 w-50 mt-8 bg-pink-400 uppercase text-white rounded-full cursor-pointer"
+            className="h-14 w-50 mt-8 bg-black uppercase text-white rounded-full cursor-pointer"
             type="button"
           >
             Shop now

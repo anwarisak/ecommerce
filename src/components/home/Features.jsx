@@ -1,6 +1,6 @@
 const Features = () => {
   return (
-    <section className="max-w-4xl mx-auto py-12">
+    <section className="max-w-[1240px] mx-auto py-12">
       <div className=" flex flex-col md:flex-row justify-around items-center gap-8 mx-0">
         {/* Feature 1 */}
         <div className="flex flex-col max-w-xs shadow-2xs">
