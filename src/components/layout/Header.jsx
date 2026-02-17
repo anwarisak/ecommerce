@@ -1,7 +1,7 @@
 import logo from "../../assets/logo.png";
 import { Navlinks } from "../../index";
 import { Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, ShoppingCart, Star } from "lucide-react";
 
 const Header = () => {
   return (
@@ -16,8 +16,9 @@ const Header = () => {
           </li>
         ))}
       </ul>
-      <div className="md:hidden">
-        <Menu />
+      <div className="">
+        <ShoppingCart />
+        <Menu className="md:hidden" />
       </div>
     </header>
   );

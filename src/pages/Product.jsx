@@ -1,3 +1,4 @@
+import ProductGrid from "../components/layout/ProductGrid";
 import Title from "../components/layout/Title";
 
 const Product = () => {
@@ -7,6 +8,7 @@ const Product = () => {
         title="Exclusive Products"
         desc="Shopping is a bit of a relaxing hobby for me which is sometimes troubling"
       />
+      <ProductGrid />
     </div>
   );
 };
