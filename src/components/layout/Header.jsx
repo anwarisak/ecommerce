@@ -6,12 +6,9 @@ import { Menu } from "lucide-react";
 const Header = () => {
   return (
     <header className="w-full max-w-[1240px] mx-auto px-4 h-16 flex items-center justify-between">
-      {/* Logo */}
       <div>
         <img className="w-8 h-8 object-cover" src={logo} alt="logo" />
       </div>
-
-      {/* Desktop Navigation */}
       <ul className="hidden md:flex items-center gap-6">
         {Navlinks.map((navlink) => (
           <li key={navlink.id} className="cursor-pointer">
@@ -19,8 +16,6 @@ const Header = () => {
           </li>
         ))}
       </ul>
-
-      {/* Mobile Menu Icon */}
       <div className="md:hidden">
         <Menu />
       </div>

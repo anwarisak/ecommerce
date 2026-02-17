@@ -8,9 +8,9 @@ const Home = () => {
   return (
     <div>
       <Header />
-      <Hero />
+      {/* <Hero />
       <Features />
-      <Product />
+      <Product /> */}
     </div>
   );
 };
