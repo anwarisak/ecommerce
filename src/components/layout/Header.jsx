@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Menu, BellDot, ShoppingCart } from "lucide-react";
 const Header = () => {
   return (
-    <header className="max-w-[1240px] mx-auto h-24 md:p-6 flex justify-around md:justify-between items-center">
+    <header className="w-full max-w-[1240px] mx-auto h-24 md:p-6 flex justify-around md:justify-between items-center">
       <div className="">
         <img className="w-8 h-8 object-cover" src={logo} alt="" />
       </div>
