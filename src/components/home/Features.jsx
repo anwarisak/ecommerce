@@ -1,9 +1,7 @@
-import React from "react";
-
 const Features = () => {
   return (
-    <section className="max-w-5xl mx-auto py-12">
-      <div className=" flex flex-col md:flex-row justify-around items-start gap-8 ml-8">
+    <section className="max-w-4xl mx-auto py-12">
+      <div className=" flex flex-col md:flex-row justify-around items-center gap-8 mx-0">
         {/* Feature 1 */}
         <div className="flex flex-col max-w-xs shadow-2xs">
           <h1 className="font-bold text-xl mb-2">Premium Quality</h1>

@@ -4,7 +4,7 @@ import { Star, Heart, ChessQueen } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="max-w-5xl mx-auto items-center">
+    <section className="max-w-4xl mx-auto items-center">
       <div className="md:flex items-center justify-center bg-white-100 p-8 ">
         <div className="">
           <h1 className="text-5xl w-100 font-bold uppercase ">
