@@ -45,8 +45,6 @@ const Footer = () => {
             <li className="hover:text-white cursor-pointer">FAQs</li>
           </ul>
         </div>
-
-        {/* Newsletter */}
         <div>
           <h3 className="font-semibold text-white mb-4">Stay Updated</h3>
           <p className="text-sm text-gray-400 mb-4">
