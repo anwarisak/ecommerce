@@ -1,13 +1,13 @@
 import heroimage from "../../assets/hero.png";
 import logo from "../../assets/react.svg";
-import cover from "../../assets/cover.webp";
+import cover from "../../assets/cover1.webp";
 import { Star, Heart, ChessQueen } from "lucide-react";
 
 const Hero = () => {
   return (
     <section className="w-full w-screen mx-auto items-center overflow-x-hidden">
-      <div className="md:flex items-center justify-center bg-white-100 p-8 ">
-        <div className="hidden">
+      <div className="md:flex items-center justify-center bg-white-100">
+        {/* <div className="hidden">
           <h1 className="text-5xl w-100 font-bold uppercase ">
             Use Fashion Into Your All Colection
           </h1>
@@ -21,16 +21,10 @@ const Hero = () => {
           >
             Shop now
           </button>
-        </div>
-        <div className="mx-4">
-          <img
-            className=""
-            src={cover}
-            alt="hero"
-          />
-        </div>
+        </div> */}
+        <img className="" src={cover} alt="hero" />
 
-        <div className="hidden">
+        {/* <div className="hidden">
           <div className="flex justify-center items-center w-full h-18 md:w-50 rounded-lg shadow-lg gap-0 my-8">
             <Star />
             <p className="text-2xl mx-4 font-light uppercase">Favourite</p>
@@ -47,7 +41,7 @@ const Hero = () => {
             </h5>
             <p className="text-sm mx-4">our brand follow the proccess</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

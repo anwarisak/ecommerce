@@ -9,15 +9,15 @@ const Header = () => {
       <div>
         <img className="w-8 h-8 object-cover" src={logo} alt="logo" />
       </div>
+        <p className="md:hidden text-lg font-extralight tracking-widest">hodan collaction</p>
       <ul className="hidden md:flex items-center gap-6">
         {Navlinks.map((navlink) => (
           <li key={navlink.id} className="cursor-pointer">
-            <Link to={navlink.path}>{navlink.label}</Link>
+            <Link className="tracking-widest" to={navlink.path}>{navlink.label}</Link>
           </li>
         ))}
       </ul>
       <div className="">
-        <ShoppingCart />
         <Menu className="md:hidden" />
       </div>
     </header>
