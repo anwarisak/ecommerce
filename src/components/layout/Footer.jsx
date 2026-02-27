@@ -54,7 +54,7 @@ const Footer = () => {
           <div className="flex bg-gray-700 rounded-lg">
             <input
               type="email"
-              placeholder="Your email"
+              placeholder="example@gmail.com"
               className="w-full px-3 py-2 text-white text-sm outline-none"
             />
             <button className="bg-white text-black px-4 text-sm font-semibold">

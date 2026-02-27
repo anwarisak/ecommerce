@@ -1,11 +1,8 @@
-import React from 'react'
+import React from "react";
+import Header from "../components/layout/Header";
 
 const About = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default About
+export default About;

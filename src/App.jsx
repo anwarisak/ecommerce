@@ -7,16 +7,20 @@ import Cart from "./pages/Cart";
 import About from "./pages/About";
 import NewArrivals from "./pages/NewArrivals";
 import Shop from "./pages/Shop";
+import Footer from "./components/layout/Footer";
 const App = () => {
   return (
     <BrowserRouter>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Product />} />
         <Route path="/newArrivals" element={<NewArrivals />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/about" element={<About />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

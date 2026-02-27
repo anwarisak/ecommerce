@@ -30,7 +30,7 @@ export const Navlinks = [
   },
 ];
 
-export const productlist = [
+export const products = [
   { id: 1, img: abay1, price: 49.99, name: "Venetian Maxi Gown- Sky Mist" },
   { id: 2, img: abay2, price: 29.99, name: "Salwa Smocked Tiered Maxi - Petal Pink" },
   { id: 3, img: abay7, price: 79.99, name: "Salwa Smocked Tiered Maxi - Petal black" },

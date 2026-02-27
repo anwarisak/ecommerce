@@ -1,48 +1,49 @@
-import heroimage from "../../assets/hero.png";
-import logo from "../../assets/react.svg";
-import cover from "../../assets/cover1.webp";
-import { Star, Heart, ChessQueen } from "lucide-react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import cover1 from "../../assets/cover1.webp";
+import cover2 from "../../assets/cover.webp";
 
 const Hero = () => {
   return (
-    <section className="w-full w-screen mx-auto items-center overflow-x-hidden">
-      <div className="md:flex items-center justify-center bg-white-100">
-        {/* <div className="hidden">
-          <h1 className="text-5xl w-100 font-bold uppercase ">
-            Use Fashion Into Your All Colection
-          </h1>
-          <h4 className="text-2xl font-thin mt-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-            asperiores!
-          </h4>
-          <button
-            className="h-14 w-50 mt-8 bg-black uppercase text-white rounded-full cursor-pointer"
-            type="button"
-          >
-            Shop now
-          </button>
-        </div> */}
-        <img className="" src={cover} alt="hero" />
+    <section className="w-full h-[90vh]">
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        effect="fade"
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
+        loop={true}
+        className="h-full"
+      >
+        {[cover1, cover2].map((img, index) => (
+          <SwiperSlide key={index}>
+            <div className="relative w-full h-[90vh]">
+              <img
+                src={img}
+                alt="hero"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
 
-        {/* <div className="hidden">
-          <div className="flex justify-center items-center w-full h-18 md:w-50 rounded-lg shadow-lg gap-0 my-8">
-            <Star />
-            <p className="text-2xl mx-4 font-light uppercase">Favourite</p>
-          </div>
-          <div className="flex justify-center items-center w-full h-18 md:w-50  rounded-lg shadow-lg gap-0 my-8">
-            <Heart />
-            <p className="text-2xl mx-4 font-light uppercase">Popular</p>
-          </div>
+              <div className="absolute inset-0 bg-black/60"></div>
 
-          <div className="flex flex-col text-center justify-center items-center w-full h-25 md:w-50 md:h-28 rounded-lg shadow-lg">
-            <ChessQueen />
-            <h5 className="text-lg mx-4 my-2 font-light uppercase">
-              LifeStyle
-            </h5>
-            <p className="text-sm mx-4">our brand follow the proccess</p>
-          </div>
-        </div> */}
-      </div>
+              <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
+                <h1 className="text-4xl md:text-6xl tracking-wide">
+                  Women’s Collection
+                </h1>
+
+                <p className="mt-4 text-sm md:text-lg max-w-xl">
+                  Statement dresses designed to highlight your strength,
+                  elegance, and confidence{" "}
+                </p>
+
+                <button className="mt-6 px-8 py-3 bg-white text-black font-semibold hover:bg-gray-200 transition cursor-pointer">
+                  Shop the Collection
+                </button>
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </section>
   );
 };

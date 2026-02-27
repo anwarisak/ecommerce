@@ -1,9 +1,9 @@
 import React from "react";
+import Header from "../components/layout/Header";
+import Cart from "./Cart";
 
 const Shop = () => {
-  return (
-    <div className="flex justify-center text-center items-center">Shop</div>
-  );
+  return <div></div>;
 };
 
 export default Shop;
