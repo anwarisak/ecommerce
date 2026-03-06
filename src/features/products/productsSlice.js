@@ -39,6 +39,10 @@ const productsSlice = createSlice({
       const item = state.cart.find((item) => item.id === action.payload.id);
       if (item && item.quantity > 1) item.quantity -= 1;
     },
+
+    removeFromCart: (state, action) => {
+      state.cart = state.cart.filter((item) => item.id !== action.payload.id);
+    },
   },
 });
 
@@ -47,5 +51,6 @@ export const {
   setItemQuantity,
   increaseItemQuantity,
   decreaseItemQuantity,
+  removeFromCart,
 } = productsSlice.actions;
 export default productsSlice.reducer;

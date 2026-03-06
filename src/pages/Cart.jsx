@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import {
   increaseItemQuantity,
   decreaseItemQuantity,
+  removeFromCart,
 } from "../features/products/productsSlice"; // adjust the path
 import { useNavigate } from "react-router-dom";
 
@@ -9,6 +10,7 @@ const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.products.cart);
+
 
   const subtotal = cartItems.reduce(
     (total, item) => total + Number(item.price) * (Number(item.quantity) || 1),
@@ -48,11 +50,19 @@ const Cart = () => {
                   className="grid grid-cols-3 md:grid-cols-5 items-center border-b py-6 text-xs md:text-sm"
                 >
                   {/* Image */}
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    className="w-16 h-16 object-cover rounded"
-                  />
+                  <div>
+                    <img
+                      src={item.img}
+                      alt={item.name}
+                      className="w-16 h-16 object-cover rounded"
+                    />
+                    <button
+                      onClick={() => dispatch(removeFromCart({ id: item.id }))}
+                      className="my-2 text-red-500 cursor-pointer"
+                    >
+                      remove
+                    </button>
+                  </div>
 
                   {/* Name */}
                   <span className="hidden md:flex">{item.name}</span>

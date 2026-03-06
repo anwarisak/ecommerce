@@ -11,14 +11,25 @@ const Header = () => {
   const CartHandle = () => {
     navigate("/cart");
   };
+  const homePage = () => {
+    navigate("/");
+  };
   const cartItems = useSelector((state) => state.products.cart);
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-sm">
       <div className="max-w-5xl mx-auto px-4 h-20 flex items-center justify-between uppercase">
-        <img className="w-8 h-8 object-cover" src={logo} alt="logo" />
+        <img
+          onClick={homePage}
+          className="w-8 h-8 object-cover cursor-pointer"
+          src={logo}
+          alt="logo"
+        />
 
-        <p className="md:hidden text-lg font-light tracking-widest">
+        <p
+          onClick={homePage}
+          className="md:hidden text-lg font-light tracking-widest cursor-pointer"
+        >
           hodan collection
         </p>
 
