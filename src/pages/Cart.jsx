@@ -25,7 +25,7 @@ const Cart = () => {
     <div className="bg-gray-100 min-h-screen py-16 px-4">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
         {/* LEFT SIDE - TABLE */}
-        <div className="md:col-span-2 bg-white p-6 rounded-xl shadow">
+        <div className="md:col-span-2 bg-white p-8 rounded-xl shadow">
           <h2 className="text-2xl font-semibold mb-8">Shopping Cart</h2>
 
           {cartItems.length === 0 ? (
@@ -33,9 +33,9 @@ const Cart = () => {
           ) : (
             <>
               {/* Table Header */}
-              <div className="grid grid-cols-4 md:grid-cols-5 text-sm font-semibold border-b pb-4 mb-6">
+              <div className="grid grid-cols-3 md:grid-cols-5 text-sm font-semibold border-b pb-4 mb-6">
                 <span>Product</span>
-                <span>Name</span>
+                <span className="hidden md:flex">Name</span>
                 <span>Price</span>
                 <span>Qty</span>
                 <span className="hidden md:flex">Total</span>
@@ -45,7 +45,7 @@ const Cart = () => {
               {cartItems.map((item) => (
                 <div
                   key={item.id}
-                  className="grid grid-cols-4 md:grid-cols-5 items-center border-b py-6 text-xs md:text-sm"
+                  className="grid grid-cols-3 md:grid-cols-5 items-center border-b py-6 text-xs md:text-sm"
                 >
                   {/* Image */}
                   <img
@@ -55,7 +55,7 @@ const Cart = () => {
                   />
 
                   {/* Name */}
-                  <span>{item.name}</span>
+                  <span className="hidden md:flex">{item.name}</span>
 
                   {/* Price */}
                   <span>${Number(item.price).toFixed(2)}</span>
