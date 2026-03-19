@@ -8,6 +8,7 @@ import About from "./pages/About";
 import NewArrivals from "./pages/NewArrivals";
 import Shop from "./pages/Shop";
 import Footer from "./components/layout/Footer";
+import Checkout from "./pages/Checkout";
 const App = () => {
   return (
     <BrowserRouter>
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/shop" element={<Shop />} />
         <Route path="/about" element={<About />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
       <Footer />
     </BrowserRouter>

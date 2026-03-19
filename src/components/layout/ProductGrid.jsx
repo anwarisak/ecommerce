@@ -1,13 +1,42 @@
+import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../features/products/productsSlice";
 
-const ProductGrid = ({ products }) => {
+const ProductGrid = () => {
   const dispatch = useDispatch();
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // Fetch products from API
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const res = await fetch("http://localhost:5000/api/products");
+        const data = await res.json();
+
+        if (res.ok) {
+          setProducts(data.data || data); // depends on your API structure
+        } else {
+          console.error("Failed to fetch products:", data.message);
+        }
+      } catch (err) {
+        console.error("Error fetching products:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
 
   const handleAddToCart = (item) => {
     dispatch(addToCart(item));
     console.log(item);
   };
+
+  if (loading) {
+    return <div className="text-center my-8">Loading products...</div>;
+  }
 
   return (
     <div className="px-8">
@@ -16,7 +45,7 @@ const ProductGrid = ({ products }) => {
           <div key={item.id} className="group relative">
             <img
               className="w-full h-64 object-cover rounded-lg"
-              src={item.img}
+              src={item.image} // make sure API uses `image` field
               alt={item.name}
             />
 
